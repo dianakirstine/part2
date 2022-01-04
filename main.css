@@ -10,19 +10,8 @@
 header{
     min-height: 100vh;
     width: 100%;
-    background-image: url(img/mobilbg.jpg);
-    background-position: center;
-    background-size: cover;
+    background-image: url(img/baggrund.jpg);
     position: relative;
-}
-
-h1{
-    padding-top: 20vh;
-}
-
-h1:hover{
-    color: #421c5e;
-    transition: 1s;
 }
 
 nav img{
@@ -30,10 +19,14 @@ nav img{
     margin: 10px;
 }
 
-/*  burger menu til mobil format  */
-
-html, body {overflow-x: hidden;
+h1{
+    padding-top: 20vh;
+    text-align: center;
+    color: #421c5e;
 }
+
+/*simpel navbar*/
+
 
 nav{
     display: flex;
@@ -42,115 +35,89 @@ nav{
     align-items: center;
 }
 
-.nav-links{
-    position: absolute;
-    background: #DDC3F0;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    right: -200px;
-    text-align: left;
-    z-index: 2;
-    transition: 1s;
-}
-
-.nav-links ul{
-    display: block;
-    text-align: center;
-
-
-}
-
-.nav-links ul li{
-    list-style: none;
+nav ul li{
     display: inline-block;
-    font-size: 20px;
-    margin-right: 10%;
-    padding: 8px 12px;
-    position: relative;
-    padding-bottom: 20%
-}
-
-.nav-links ul li a{
-    color: #000;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-
-
-nav .fas{
-    display: block;
-    color: #000;
-    margin: 40px;
-    font-size: 22px;
-    cursor: pointer;
-
-}
-
-.text-box{
-    width: 90%;
-    color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     text-align: center;
+    margin-right: 1%;
+    padding-bottom: 20%;
+    position: relative;
 }
 
-/* første sektion */
+nav ul li a{
+    color:#000;
+    text-decoration: none;
+    font-size: 15px;
+
+}
+
+/*ny sektion - header text*/
 
 .text-box h1{
-    font-size: 52px;
+    font-size: 60px;
 }
-
-.text-box h1:hover{
-    color: #421c5e;
-    transition: 1s;
-}
-
 
 .text-box p{
-    margin: 10px 0 40px;
+    text-align: center;
     font-size: 14px;
 }
 
-/*  ny sektion – velkommen til min portfolio med knap */
+
+
+/*sektion med velkommen og knap til om mig*/
+
 
 .welcome{
     display: block;
-    background-image: url(img/bg.png);
-    min-height: 10vw;
-    background-repeat: no-repeat;
-    background-position:center;
-    text-align: center;
-    padding-top: 100px;
-
+    text-align:center;
+    padding-top: 50px;
+    padding-bottom: 10px;
 }
 
-h2{
-    padding-bottom: 18%;
+.welcome p{
+    display: block;
     text-align: center;
-}
-
-p{
-    font-size: 14px;
-    line-height: 22px;
-    padding-bottom: 7%;
-    padding-left: 7%;
-    padding-right: 7%;
+    font-size: 15px;
+    padding-top: 1vh;
+    padding-bottom: 1%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 4%;
 }
 
 .button{
     display: inline-block;
     text-decoration: none;
-    background: #DDC3F0;
+    background:transparent;
+    color: #000;
     border: 1px solid #DDC3F0;
     padding: 12px 34px;
     font-size: 13px;
     position: relative;
     cursor: pointer;
+}
 
+/*  ny sektion – velkommen til min portfolio med knap */
+
+.container{
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.container img{
+    width: 90%;
+    background-size: cover;
+
+}
+
+
+footer{
+    padding-top: 7%;
 }
 
 
@@ -158,7 +125,6 @@ footer p{
     text-align: right;
     margin-right: 22px;
     font-size: 10px;
-    padding: 0%;
 }
 
 footer img{
@@ -168,81 +134,37 @@ footer img{
     padding: 3px;
 }
 
-/* desktop format  */
+
+
+
+
+
+/* styling: desktop format  */
 
 @media screen and (min-width: 1000px) {
 
 
-    /*  navbar til desktop  */
     
     .header{
         min-height: 100vh;
         background-image: url(baggrund.jpg);
     }
 
-    /* gemmer  burger menuens icon */
-
-    nav .fas{
-        display: none;
-    }
-
-
-    /*  navbarens links  */
-
-    nav{
-        display: flex;
-        padding: 2% 5% 2% 15%;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-
-
-    .nav-links{
-        height: 100vh;
-        width: 100%;
-        right: -380px;
-        text-align: left;
-        position: absolute;
-        background-color: transparent;
-        padding-top: 4%;
-    
-    }
-
-    
-
-    .nav-links ul li{
-        display: inline-block;
-        margin-right: -9%;
-        margin-left: 10%;
-    }
-
-    .nav-links ul li a{
-        color: #000;
-        text-align: left;
-        position: relative;
-
-    }
-    
-    /*  text dekoration til desktop  */
-
-
-   .text-box h1{
-        font-size: 62px;
+    .text-box h1{
+        font-size: 65px;
     }
 
 
 
     .welcome h2{
-    padding-top: 5%;
-    padding-bottom: 7%;
-
+        padding-top: 2%;
+        padding-bottom: 1%;
     }
 
 
-    
+
     .welcome p{
-        padding-top: 2vh;
+        padding-top: 1vh;
         padding-bottom: 1%;
         padding-left: 35%;
         padding-right: 35%;
@@ -250,25 +172,24 @@ footer img{
         
     }
 
-
-    .welcome img{
-        display: flex;
-        
-        
-    }
-
-
-    .button{
-        border: 1px solid #DDC3F0;
-        background: transparent;
-        
-    }
-    
+/*hover-effekt virker kun på desktop og er derfor kun implementeret her*/
 
     .button:hover{
         border: 1px solid #DDC3F0;
         background: #DDC3F0;
         transition: 1s;
+    }
+
+
+    .container{
+        width: auto;
+        margin: auto;
+        height: 100%;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        position: relative;
     }
     
 
